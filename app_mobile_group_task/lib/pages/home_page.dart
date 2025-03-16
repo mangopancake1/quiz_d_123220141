@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Berita Terkini - $username"),
+        title: Text("Selamat Datang - $username"),
         backgroundColor: Colors.blueAccent,
       ),
       body: ListView.builder(
@@ -22,7 +22,8 @@ class HomePage extends StatelessWidget {
             margin: const EdgeInsets.all(10),
             child: ListTile(
               leading: Image.network(news.image, width: 100, fit: BoxFit.cover),
-              title: Text(news.title, style: const TextStyle(fontWeight: FontWeight.bold)),
+              title: Text(news.title,
+                  style: const TextStyle(fontWeight: FontWeight.bold)),
               subtitle: Text("${news.likes} Suka"),
               onTap: () {
                 Navigator.push(
